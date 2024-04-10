@@ -9,5 +9,7 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
-CMD [ "node", "app.js" ]
+EXPOSE 8000
+CMD [ "node", "server.js" ]
+
+#build command: docker build -t supermongol/hello-world-k8s-api .
