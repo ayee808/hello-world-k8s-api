@@ -2,19 +2,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world-node
+  name: hello-world-k8s-api
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hello-world-node
+      app: hello-world-k8s-api
   template:
     metadata:
       labels:
-        app: hello-world-node
+        app: hello-world-k8s-api
     spec:
       containers:
-      - name: hello-world-node
-        image: supermongol/hello-world-node
+      - name: hello-world-k8s-api
+        image: supermongol/hello-world-k8s-api
         ports:
-        - containerPort: 3000
+        - containerPort: 8000
