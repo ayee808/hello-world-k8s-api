@@ -18,3 +18,6 @@ spec:
         image: supermongol/hello-world-k8s-api
         ports:
         - containerPort: 8000
+
+# UPDATE K8s IMAGE: kubectl set image deployment/hello-world-k8s-api hello-world-k8s-api=supermongol/hello-world-k8s-api:latest
+# DELETE EXISTING PODS: kubectl delete pods -l app=hello-world-k8s-api
